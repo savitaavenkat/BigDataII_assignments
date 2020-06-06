@@ -1,0 +1,17 @@
+Problem: To model ER as a Binary Classification Problem
+(e.g) I'm considering modeling a spam classifier here
+
+Q1. How would you construct the training data set? (considering we obtain the data from a standard dataset that is already present or collect data over a period of time that has been prone to user activity)
+Answer: pre-process the obtained data-> normalize text, remove stopwords, etc,. Find the most frequently used words (calculate td-idf) among the mails under both spam and non-spam folder.
+Compare both spam and non-spam's top frequently used words, rank the spam's td-idf based frequent words based on the comparison made (re-rank the ones that occur in non-spam).
+Now, we have a training set with feature (say, top 10000 ranked td-idf based most frequent words in spam and non-spam mails) and the corresponding values as to if the word was mostly found in a spam mail or non-spam mail.
+Important thing to keep in mind, make sure both the spam and non-spam classes have an equal (or almost fairly equal) number of records-> this will help the classifier from being biased towards the majority class.
+
+Q2. How would you convert the feature into a vector?
+Answer: One can either use one-hot encoding (use 1 to mark spam or O to mark non spam) or use pre-trained text embeddings.
+Can also use a n-gram based text embedding technique which will assign numerical values (weight to text) based on importance.
+
+Q3. How would you construct a test set?
+Answer: Take a fair number of (randomly pulled out) pair of records from the training set itself, say divide the generated training set as 70/30 (70 percent data for training, 30 percent for testing the model).
+Or, construct a fresh set from the same distribution (constructed in the same manner to the training set) of data as the training set, this is important to fairly assess the model's performance.
+Another most important criteria is to check if there are equal number of entities in both the classes (spam and non-spam) else, the model will start overfitting the majority class (so compute per class accuracy of the model).

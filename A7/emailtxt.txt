@@ -1,0 +1,26 @@
+To: Nick(developer) nick@org.ca
+From: Savitaa(manager) savitaav@org.ca
+Subject: Need to perform Hyper-Parameter tuning for unsupervised(clustering) technique//
+
+Hi Nick,
+
+Good Day!
+
+This e-mail is in regard to the need to perform parameter tuning for clustering/unsupervised learning technique (for eg., an algorithm like K-means). 
+I would like to provide a high-level view of how you can approach this problem. Hyper-parameter tuning is an important step in modeling, as it enables us to find the best version of the model (a model- best suited for the problem statement for which we plan to develop the model in place).
+I hope you are aware of (or) have had some experience tuning various supervised learning algorithm parameters. If so, then you may very well understand it's importance.
+Coming to the part on how to approach this problem: 
+1. Take a look at the dataset, if it's huge, try to sample data and then iteratively apply unsupervised learning techniques.
+2. You can randomly initialize hyper-parameters, run the model on the same dataset and find the model parameters that give you the best result.
+3.  If you have good experience with hyper-parameter tuning, you may also analyze the dataset and come-up straight with an intuitive value for the parameters of the model.
+4. Also, you can experiment with choosing parameters dynamically over random initialization, and over time let the model optimize it (settle down for the best choice of parameters).
+5. Anything you deem fit that could solve the problem and provide us with the best possible model- that is able to provide good real-time predictions (by that I mean it's able to generalize well for new or unseen data points).
+
+I let you to further explore the possibilities and challenges in obtaining the best version of an unsupervised-learning technique based model.
+
+Hope the above pointers from my side will give you a fair idea of where and how to start. Feel free to reach out to me in case of any queries.
+
+Have a great day at work!
+
+Thanks and Regards,
+Savitaa Venkateswaran
